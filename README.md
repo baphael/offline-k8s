@@ -3,10 +3,10 @@
 Ce projet vise à simplifier le déploiement d'un cluster K8S dans un environnement air-gapped.
 
 > **Remarques** :
-  - Ça serait plus sexy avec ansible...
-  - Ce projet n'a pas de grandes prétentions, d'autres le font bien mieux (ex : K3S, K0S, etc.).
+> - Ça serait plus sexy avec ansible...
+> - Ce projet n'a pas de grandes prétentions, d'autres le font bien mieux (ex : K3S, K0S, etc.).
 
-> **Avis impopulaire** : K8S est un bazooka surcôté. Dans 95+% des scénarios (et à fortiori dans un environnement offline !) Docker Swarm Mode ou Nomad (HashiCorp) sont amplement suffisants !
+> **Avis impopulaire** : K8S est un char d'assault surcôté. Dans 95+% des scénarios (et à fortiori dans un environnement offline !) Docker Swarm Mode ou Nomad (HashiCorp) sont amplement suffisants !
 
 ## Prérequis
 - Debian 10+ (ou dérivé)
@@ -16,9 +16,9 @@ Ce projet vise à simplifier le déploiement d'un cluster K8S dans un environnem
 ## Inforamtions
 - Version K8S utilisée : 1.23.1
   > Pour upagrder vers une verion plus récente :
-  - remplacer les images docker (ou modifier les tags dans le script `download_images.sh`),
-  - remplacer les packages `.deb` (vérifier les compatibilités avec les images docker !)
-  - modifier la variable `${K8S_VERSION}` dans `init.sh`.
+  > - remplacer les images docker (ou modifier les tags dans le script `download_images.sh`),
+  > - remplacer les packages `.deb` (vérifier les compatibilités avec les images docker !)
+  > - modifier la variable `${K8S_VERSION}` dans `init.sh`.
 
 Ce déploiement utilise le plugin CNI **calico** pour faire du masquerading (e.g. : tous les flux sortent par l'@IP du node master).
 
@@ -49,4 +49,4 @@ Assurez-vous que le pool d'@IP de calico (`snat.yaml`) correspond à celui de la
 
 Pour vérifier le bon foncitonnement du cluster, lancer la commande `kubectl get nodes` (en superutilisateur) : tous les noeuds doivent apparaître et être en état `Ready`.
 
-GLHF :)
+GLHF 🙂
