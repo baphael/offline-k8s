@@ -13,7 +13,7 @@ Ce projet vise à simplifier le déploiement d'un cluster K8S dans un environnem
 - `docker.io`, `rsync`, `apt-transport-https`, `ca-certificates`, `curl`, `gnupg2`, `software-properties-common`, `ethtool`, `ebtables`, `socat`, `conntrack`
   > Ces dépendances sont installées via `apt` dans `init.sh` et `join.sh`. Cela suppose l'existance d'un miroir apt (type apt-cacher) accessible et configuré. Si ce n'est pas le cas, il faudra les récupérer manuellement et les transférer sur les nodes du cluster K8S...
 
-## Inforamtions
+## Informations
 - Version K8S utilisée : 1.23.1
   > Pour upagrder vers une verion plus récente :
   > - remplacer les images docker (ou modifier les tags dans le script `download_images.sh`),
